@@ -1,13 +1,14 @@
-package com.example.springbootappdemo;
+package com.example.springbootappdemo.entity;
 
 import jakarta.persistence.*;
 
 @Entity
-@Table(name = "COURSE")
+@Table(name = "COURSES")
 public class Course {
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //
+    @GeneratedValue(strategy = GenerationType.IDENTITY) //con esta estrategia se delega la generacion de la clave
+    // primaria a el propio motor de la base de datos
     private Long id;
 
     @Column(name = "NAME")
