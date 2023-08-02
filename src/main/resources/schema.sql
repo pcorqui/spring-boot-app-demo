@@ -6,3 +6,6 @@ CREATE TABLE IF NOT EXISTS COURSES(
     description varchar(1000) NOT NULL,
     PRIMARY KEY (id)
 );
+
+--manera de crear una secuencia en h2
+CREATE SEQUENCE IF NOT EXISTS my_sequence START WITH 5 INCREMENT BY 1;

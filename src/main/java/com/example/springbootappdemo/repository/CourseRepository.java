@@ -9,7 +9,8 @@ import java.util.stream.Stream;
 @Repository
 public interface CourseRepository extends CrudRepository<Course,Long> {
     //Query methods
-    //it are methods in the repository interface with speecific naming patterns
+    //they are methods in the repository interface with speecific naming patterns
+    //the name of the colums using in the query methods are the names of the properties in the class
     Iterable<Course> findAllByCategory(String category);
     Iterable<Course> findAllByCategoryOrderByName(String category);
     boolean existsByName(String name);

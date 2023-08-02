@@ -7,29 +7,34 @@ import jakarta.persistence.*;
 public class Course {
     @Id
     @Column(name = "ID")
-    @GeneratedValue(strategy = GenerationType.IDENTITY) //con esta estrategia se delega la generacion de la clave
-    // primaria a el propio motor de la base de datos
+    @SequenceGenerator(name = "Course_sequence",sequenceName = "MY_SEQUENCE",allocationSize = 1)//con esta estrategia se delega
+    //la generacion de la secuenca a la secuencia creada en base de datos
+    //sequenceName es el nombre de la secuencia en base de datos
+    //name: el nombre que se quiera proporcionar a la secuencia y que es referenciado por generator en la sig. anotacion
+    //allocationSize: el valor que incrementara la secuencia, no puede ser negativo, default: 50
+    @GeneratedValue(strategy = GenerationType.SEQUENCE,generator = "Course_sequence")
     private Long id;
 
     @Column(name = "NAME")
-    private String nombre;
+    private String name;
 
     @Column(name = "CATEGORY")
     private String category;
 
     @Column(name = "RATING")
-    private String rating;
+    private int rating;
 
     @Column(name = "DESCRIPTION")
     private String description;
 
-    public Course(Long id, String nombre, String category, String rating, String description) {
-        this.id = id;
-        this.nombre = nombre;
+    public Course(String nombre, String category, int rating, String description) {
+        this.name = nombre;
         this.category = category;
         this.rating = rating;
         this.description = description;
     }
+
+    public Course(){}
 
     public Long getId() {
         return id;
@@ -40,11 +45,11 @@ public class Course {
     }
 
     public String getNombre() {
-        return nombre;
+        return name;
     }
 
     public void setNombre(String nombre) {
-        this.nombre = nombre;
+        this.name = nombre;
     }
 
     public String getCategory() {
@@ -55,11 +60,11 @@ public class Course {
         this.category = category;
     }
 
-    public String getRating() {
+    public int getRating() {
         return rating;
     }
 
-    public void setRating(String rating) {
+    public void setRating(int rating) {
         this.rating = rating;
     }
 
@@ -75,7 +80,7 @@ public class Course {
     public String toString() {
         return "Course{" +
                 "id=" + id +
-                ", nombre='" + nombre + '\'' +
+                ", nombre='" + name + '\'' +
                 ", category='" + category + '\'' +
                 ", rating='" + rating + '\'' +
                 ", description='" + description + '\'' +
