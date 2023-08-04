@@ -13,3 +13,15 @@ VALUES(NEXTVAL('my_sequence'),'Fully Reactive: Spring, Kotlin, and JavaFX Playin
 
 INSERT INTO COURSES(ID, NAME, CATEGORY, RATING, DESCRIPTION)
 VALUES(NEXTVAL('my_sequence'),'Getting Started with Spring Cloud Kubernetes','Spring',5,'Master Spring Boot application deployment with Kubernetes');
+
+INSERT INTO COURSES(ID, NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES(NEXTVAL('my_sequence'),'Getting Started with Spring Cloud Kubernetes','Spring',5,'Master Spring Boot application deployment with Kubernetes');
+
+INSERT INTO COURSES(ID, NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES(NEXTVAL('my_sequence'),'Getting Started with Spring Cloud Kubernetes','Spring',5,'Master Spring Boot application deployment with Kubernetes');
+
+INSERT INTO COURSES(ID, NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES(NEXTVAL('my_sequence'),'Getting Started with Spring Cloud Kubernetes','Spring',5,'Master Spring Boot application deployment with Kubernetes');
+
+INSERT INTO COURSES(ID, NAME, CATEGORY, RATING, DESCRIPTION)
+VALUES(NEXTVAL('my_sequence'),'Getting Started with Spring Cloud Kubernetes','Spring',5,'Master Spring Boot application deployment with Kubernetes');
